@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5f7">
+  <title>FRESHDROP — Uji Kamera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="brand">
+      <div class="brand-mark" aria-hidden="true">F</div>
+      <div>
+        <p class="eyebrow">PROTOTIPE PENELITIAN</p>
+        <h1>FRESHDROP</h1>
+        <p class="tagline">Invisible Change <span aria-hidden="true">→</span> Visible Information</p>
+      </div>
+    </header>
+
+    <section class="card" aria-labelledby="tag-title">
+      <p class="eyebrow">TAG TERDETEKSI</p>
+      <h2 id="tag-title" class="tag-id">Memeriksa ID…</h2>
+      <div id="status" class="notice" role="status">Tahap A — uji akses kamera smartphone.</div>
+      <p class="instruction">Pastikan halaman dibuka melalui HTTPS. Beri izin kamera saat diminta, lalu uji ambil foto, retake, dan gunakan foto.</p>
+
+      <div class="camera-frame" id="camera-frame">
+        <video id="video" autoplay playsinline muted hidden></video>
+        <canvas id="still" hidden></canvas>
+        <img id="preview" alt="Pratinjau foto tag" hidden>
+        <div id="placeholder" class="placeholder">
+          <span class="camera-icon" aria-hidden="true">◎</span>
+          <span>Pratinjau kamera akan muncul di sini</span>
+        </div>
+        <div class="guide" aria-hidden="true"><span>Tempatkan seluruh tag di dalam bingkai</span></div>
+      </div>
+
+      <p id="message" class="message" aria-live="polite">Kamera belum dibuka.</p>
+      <div class="controls">
+        <button id="open-camera" class="button button-primary">Buka kamera belakang</button>
+        <button id="capture" class="button button-secondary" disabled>Ambil foto</button>
+        <button id="retake" class="button button-secondary" hidden>Ambil ulang</button>
+        <button id="use-photo" class="button button-primary" hidden>Gunakan foto</button>
+      </div>
+      <p class="fine-print">Uji ini hanya memeriksa akses kamera, pengambilan foto, dan pratinjau. Belum menyimpan atau menganalisis data.</p>
+    </section>
+    <footer>FRESHDROP · Milestone A · Kamera & pratinjau</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
